@@ -43,7 +43,6 @@ class Inventory extends React.Component {
   logout() {
     base.unauth();
     this.setState({ uid: null });
-    console.log(this.state.uid);
   }
 
   authHandler (err, authData) {
@@ -108,7 +107,7 @@ class Inventory extends React.Component {
     )
   }
   render() {
-    const logout = <button onClick={() => this.logout}>Log Out</button>
+    const logout = <button onClick={this.logout}>Log Out</button>
     //check if they are not logged in at all
     if (!this.state.uid) {
       return <div>{this.renderLogin()}</div>
