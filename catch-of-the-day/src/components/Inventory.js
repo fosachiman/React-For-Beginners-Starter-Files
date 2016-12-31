@@ -131,9 +131,7 @@ class Inventory extends React.Component {
       </div>
     )
   }
-}
-
-Inventory.propTypes = {
+  static propTypes = {
   fishes: React.PropTypes.object.isRequired,
   updateFish: React.PropTypes.func.isRequired,
   removeFish: React.PropTypes.func.isRequired,
@@ -141,5 +139,16 @@ Inventory.propTypes = {
   loadSamples: React.PropTypes.func.isRequired,
   storeId:React.PropTypes.string.isRequired
 }
+}
+
+//This can go inside of the component class, so the object no longer needs to be referenced
+// Inventory.propTypes = {
+//   fishes: React.PropTypes.object.isRequired,
+//   updateFish: React.PropTypes.func.isRequired,
+//   removeFish: React.PropTypes.func.isRequired,
+//   addFish: React.PropTypes.func.isRequired,
+//   loadSamples: React.PropTypes.func.isRequired,
+//   storeId:React.PropTypes.string.isRequired
+// }
 
 export default Inventory;
